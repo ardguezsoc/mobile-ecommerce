@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "eslint": "eslint src --ext .ts,.tsx --config .eslintrc.js --ignore-path .eslintignore --cache",
     "eslint:fix": "eslint . --ext .ts,.tsx --fix",
     "build": "vite build",
@@ -18,7 +18,7 @@
       "eslint --fix",
       "git add"
     ],
-    "*.+(json|css|md)": [
+    "*.+(json|scss|md)": [
       "prettier --write",
       "git add"
     ]
@@ -40,6 +40,7 @@
     "husky": "^8.0.0",
     "lint-staged": "^13.2.3",
     "prettier": "^3.0.0",
+    "sass": "^1.63.6",
     "vite": "^4.4.0"
   }
 }
