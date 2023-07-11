@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Root } from './routes/root';
 import NotFoundPage from './pages/NotFound';
 import { MobileDetail } from './pages/MobileDetail';
+import { InfrastructureProvider } from './context/infraestructure';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <InfrastructureProvider>
+      <RouterProvider router={router} />
+    </InfrastructureProvider>
   </React.StrictMode>
 );

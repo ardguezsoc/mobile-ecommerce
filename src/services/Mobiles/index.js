@@ -1,4 +1,4 @@
-export const createMobileService = async (mobileRepository) => {
+export const createMobileService = (mobileRepository) => {
   const getMobilePage = () => mobileRepository.getMobilePage();
 
   return {
