@@ -2,7 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: black;
-  background-color: white;
+  background-color: red;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -14,6 +14,13 @@ a {
   &:hover {
     color: #535bf2;
   }
+}
+
+.mainContainer {
+  margin: 44px auto 0px;
+  width: 100vw;
+  padding-bottom: 15px;
+  height: 100vh;
 }
 
 body {
