@@ -1,0 +1,14 @@
+.wrapperGrid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 15px;
+  margin: 74px auto 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

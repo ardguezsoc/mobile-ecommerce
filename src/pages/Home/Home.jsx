@@ -1,7 +1,7 @@
 import { React } from 'react';
 import { useMobileSource } from '../../hooks';
 import { useQuery } from 'react-query';
-import { MobileCardList } from '../../components/MobileCardList';
+import { MobileCardList } from '../../components/MobileCardList/MobileCardList';
 import { useState } from 'react';
 
 export const Home = () => {
@@ -12,5 +12,5 @@ export const Home = () => {
     onSuccess: setMobileData,
   });
 
-  return <div>{mobileData.length ? <MobileCardList mobileList={mobileData} /> : <p>Loading...</p>}</div>;
+  return mobileData.length ? <MobileCardList mobileList={mobileData} /> : <p>Loading...</p>;
 };
