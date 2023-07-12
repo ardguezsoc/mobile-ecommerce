@@ -1,0 +1,4 @@
+.rightMobileDetailContainer {
+  display: flex;
+  flex-direction: column;
+}
