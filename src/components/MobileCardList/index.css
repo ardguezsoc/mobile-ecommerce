@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-gap: 15px;
-  margin: 74px auto 15px;
   justify-content: center;
   align-items: center;
 }
