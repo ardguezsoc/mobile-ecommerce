@@ -13,14 +13,14 @@ export const Header = () => {
   return (
     <div className="header">
       <div className="headerLogo" onClick={() => navigateHome()}>
-        <img src="./images/logo.png" alt="logo" />
+        <img src="../images/logo.png" alt="logo" />
       </div>
       <div className="webName" onClick={() => navigateHome()}>
         <h3>EMobile</h3>
       </div>
       <div className="cartContainer">
         <div className="cartNumberItems">{numberOfItems}</div>
-        <img src="./icons/cart.svg" alt="cart" height="25px" width="25px" />
+        <img src="../icons/cart.svg" alt="cart" height="25px" width="25px" />
       </div>
     </div>
   );

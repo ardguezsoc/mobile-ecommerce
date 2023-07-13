@@ -1,13 +1,10 @@
 import React from 'react';
 import './index.css';
-import { useNavigate } from 'react-router-dom';
 
-export const Card = ({ mobileItem }) => {
+export const Card = ({ mobileItem, navigateTo }) => {
   const { imgUrl, brand, model, price, id } = mobileItem;
 
   const handlePrice = (price) => (price ? `${price}$` : 'Free');
-
-  const navigate = useNavigate();
 
   return (
     <div className="productContainer">
@@ -26,7 +23,7 @@ export const Card = ({ mobileItem }) => {
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi quibusdam asperiores porro tempora
             veritatis cumque.
           </p>
-          <button className="productButton" onClick={() => navigate(`/mobile/${id}`)}>
+          <button className="productButton" onClick={() => navigateTo(`/mobile/${id}`)}>
             View more
           </button>
         </div>

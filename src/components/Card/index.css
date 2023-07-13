@@ -16,7 +16,7 @@
   background-color: #f7f6f9;
   width: 350px;
   height: 100%;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -66,11 +66,7 @@
   padding: 10px 20px;
   border-radius: 7px;
   border: none;
-  background-color: #1b2741;
-  color: #f7f6f9;
   font-size: 18px;
   text-transform: capitalize;
-  cursor: pointer;
-  transition: 0.5s;
   margin-top: 20px;
 }

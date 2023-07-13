@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Search } from '../../components/Search';
 import filterMobileArray from './utils/filterMobileArray';
 import { Toast, showToast } from '../../components/Toast';
+import { useNavigate } from 'react-router-dom';
 
 import './index.css';
 import { useEffect } from 'react';
@@ -15,6 +16,9 @@ export const Home = () => {
   const { getMobilePage } = useMobileSource();
   const [mobileData, setMobileData] = useState([]);
   const [searchData, setSearchData] = useState();
+  const navigate = useNavigate();
+
+  const navigateTo = (navigationPath) => navigate(navigationPath);
 
   const { data: mobileListData = [], isLoading } = useQuery(['getMobiles'], () => getMobilePage(), {
     onSuccess: setMobileData,
@@ -33,7 +37,7 @@ export const Home = () => {
         <div className="homeContainer">
           <Toast />
           <Search setSearchData={setSearchData} />
-          <MobileCardList mobileList={mobileData} />
+          <MobileCardList mobileList={mobileData} navigateTo={navigateTo} />
         </div>
       )}
     </div>
