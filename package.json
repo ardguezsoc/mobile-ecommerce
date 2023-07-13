@@ -7,7 +7,7 @@
     "start": "vite",
     "eslint": "eslint src --ext .ts,.tsx --config .eslintrc.js --ignore-path .eslintignore --cache",
     "eslint:fix": "eslint . --ext .ts,.tsx --fix",
-    "test": "vitest",
+    "test": "vitest --watch=false",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
