@@ -1,21 +1,24 @@
-import { React } from 'react';
+import React from 'react';
 import { useMobileSource } from '../../hooks';
 import { useQuery } from 'react-query';
 import { MobileCardList } from '../../components/MobileCardList/MobileCardList';
 import { useState } from 'react';
 import { Search } from '../../components/Search';
 import filterMobileArray from './utils/filterMobileArray';
+import { Toast, showToast } from '../../components/Toast';
 
 import './index.css';
 import { useEffect } from 'react';
+import { Spinner } from '../../components/Spinner';
 
 export const Home = () => {
   const { getMobilePage } = useMobileSource();
   const [mobileData, setMobileData] = useState([]);
   const [searchData, setSearchData] = useState();
 
-  const { data: mobileListData = [] } = useQuery(['getMobiles'], () => getMobilePage(), {
+  const { data: mobileListData = [], isLoading } = useQuery(['getMobiles'], () => getMobilePage(), {
     onSuccess: setMobileData,
+    onError: () => showToast('Something went wrong', 'error'),
   });
 
   useEffect(() => {
@@ -24,13 +27,14 @@ export const Home = () => {
 
   return (
     <div className="mainContainer">
-      {mobileData.length ? (
+      {isLoading ? (
+        <Spinner />
+      ) : (
         <div className="homeContainer">
+          <Toast />
           <Search setSearchData={setSearchData} />
           <MobileCardList mobileList={mobileData} />
         </div>
-      ) : (
-        <p>Loading...</p>
       )}
     </div>
   );

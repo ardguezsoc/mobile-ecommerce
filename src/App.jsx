@@ -6,6 +6,7 @@ import { Root } from './routes/root';
 import NotFoundPage from './pages/NotFound';
 import { MobileDetail } from './pages/MobileDetail';
 import { InfrastructureProvider } from './context/infraestructure';
+import { CartProvider } from './context/cart';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Header } from './components/Header';
 
@@ -15,7 +16,7 @@ const queryClient = new QueryClient({
       refetchOnWindowFocus: false,
       refetchOnMount: false,
       refetchOnReconnect: false,
-      cacheTime: 300,
+      cacheTime: 3600,
     },
   },
 });
@@ -24,14 +25,16 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <InfrastructureProvider>
-        <Router>
-          <Header />
-          <Routes>
-            <Route path="*" element={<NotFoundPage />} />
-            <Route path="/" element={<Root />} />
-            <Route path="/mobile/:id" element={<MobileDetail />} />
-          </Routes>
-        </Router>
+        <CartProvider>
+          <Router>
+            <Header />
+            <Routes>
+              <Route path="*" element={<NotFoundPage />} />
+              <Route path="/" element={<Root />} />
+              <Route path="/mobile/:id" element={<MobileDetail />} />
+            </Routes>
+          </Router>
+        </CartProvider>
       </InfrastructureProvider>
     </QueryClientProvider>
   </React.StrictMode>

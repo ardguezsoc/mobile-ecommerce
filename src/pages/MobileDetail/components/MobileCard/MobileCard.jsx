@@ -1,8 +1,9 @@
-import { React, useState } from 'react';
+import React, { useState } from 'react';
 import { DetailCard } from '../DetailCard';
 import { MobileOptions } from '../MobileOptions';
+import { Spinner } from '../../../../components/Spinner';
 
-export const MobileCard = ({ mobileData, postMobile }) => {
+export const MobileCard = ({ mobileData, postMobile, addingItemToCart }) => {
   const { imgUrl, options } = mobileData;
   const optionValues = Object.values(options);
 
@@ -17,8 +18,8 @@ export const MobileCard = ({ mobileData, postMobile }) => {
       <div className="rightMobileDetailContainer">
         <DetailCard mobileData={mobileData} />
         <MobileOptions options={optionValues} setFunction={[setColor, setMemory]} />
-        <button className="productButton" onClick={() => postMobile({ memory, color })}>
-          Add to cart
+        <button disabled={addingItemToCart} className="productButton" onClick={() => postMobile({ memory, color })}>
+          {addingItemToCart ? <Spinner /> : 'Add to cart'}
         </button>
       </div>
     </div>
