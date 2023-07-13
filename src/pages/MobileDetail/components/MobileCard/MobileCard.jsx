@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { DetailCard } from '../DetailCard';
 import { MobileOptions } from '../MobileOptions';
 import { Spinner } from '../../../../components/Spinner';
+import './index.css';
 
 export const MobileCard = ({ mobileData, postMobile, addingItemToCart }) => {
   const { imgUrl, options } = mobileData;
@@ -12,9 +13,7 @@ export const MobileCard = ({ mobileData, postMobile, addingItemToCart }) => {
 
   return (
     <div className="mobileDetailContainer">
-      <div>
-        <img src={imgUrl} alt="mobile-image" />
-      </div>
+      <img className="sticky" src={imgUrl} alt="mobile-image" />
       <div className="rightMobileDetailContainer">
         <DetailCard mobileData={mobileData} />
         <MobileOptions options={optionValues} setFunction={[setColor, setMemory]} />

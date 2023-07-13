@@ -1,3 +1,22 @@
 .arrow {
   cursor: pointer;
 }
+.arrowContainer {
+  padding: 15px;
+  position: absolute;
+  left: 30px;
+  top: 74px;
+}
+
+.arrowContainer:hover {
+  animation: swingViewport 1s ease-in-out infinite alternate;
+}
+
+@keyframes swingViewport {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-10px);
+  }
+}

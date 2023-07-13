@@ -1,0 +1,81 @@
+$color_1: gray;
+$color_2: black;
+$color_3: #f3a63e;
+
+.wrapMobileDetail,
+.deliveryExtranInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  row-gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.moreMobileOffers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f3a63e;
+  padding: 10px 15px;
+  color: white;
+  //make a nice shadow
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  margin-top: 1.5rem;
+  button {
+    background-color: white;
+    color: black;
+  }
+}
+
+.deliveryExtranInfo {
+  div:first-child {
+    font-size: 16px;
+    color: $color_2;
+  }
+  margin-top: 2rem;
+  font-size: 14px;
+  color: $color_1;
+}
+
+.mobileDetailContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: white;
+}
+.fullGridrow {
+  grid-column: span 2;
+}
+
+.deliveryContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  p {
+    font-size: 13px;
+    color: $color_1;
+  }
+  .deliveryCompanyName {
+    font-size: 14px;
+    color: $color_3;
+    margin-left: 10px;
+  }
+}
+.mobileDetailPriceContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.mobileDetailOldPrice {
+  color: $color_1;
+  font-size: 13px;
+  text-decoration-line: line-through;
+  margin-left: 10px;
+}
+.mobileDetailNewPrice {
+  font-size: 25px;
+  color: $color_2;
+  color: $color_3;
+}
