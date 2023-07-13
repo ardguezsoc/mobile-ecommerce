@@ -69,4 +69,6 @@
   font-size: 18px;
   text-transform: capitalize;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }

@@ -2,3 +2,17 @@
   display: flex;
   flex-direction: column;
 }
+
+img.sticky {
+  position: sticky;
+  top: 74px;
+  width: 400px;
+  margin-right: 3rem;
+  height: 100%;
+}
+
+.mobileDetailLabel {
+  font-weight: bold;
+  font-size: 14px;
+  color: #4c4c4c;
+}

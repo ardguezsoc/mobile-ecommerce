@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import { useCart, useMobileSource } from '../../hooks';
-import './index.css';
+import './index.scss';
 import { MobileCard } from './components/MobileCard';
 import { useMutation } from 'react-query';
 import { BackArrow } from '../../components/BackArrow';
@@ -33,10 +33,8 @@ export const MobileDetail = () => {
 
   return (
     <div className="mainContainer">
+      <BackArrow goBack={() => navigate(-1)} />
       <Toast />
-      <div>
-        <BackArrow goBack={() => navigate(-1)} /> <h1>Mobile Details</h1>
-      </div>
       {isLoading ? (
         <Spinner />
       ) : (
