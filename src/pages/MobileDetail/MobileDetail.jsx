@@ -7,6 +7,8 @@ import { MobileCard } from './components/MobileCard';
 import { useMutation } from 'react-query';
 import { BackArrow } from '../../components/BackArrow';
 import { useNavigate } from 'react-router-dom';
+import { Toast, showToast } from '../../components/Toast';
+import { Spinner } from '../../components/Spinner';
 
 export const MobileDetail = () => {
   const { getMobileDetails, postMobileToCart } = useMobileSource();
@@ -16,16 +18,30 @@ export const MobileDetail = () => {
 
   const { data: mobileDetail = [], isLoading } = useQuery(['getMobileDetails'], () => getMobileDetails(id));
 
-  const { mutate } = useMutation(({ memory, color }) => postMobileToCart({ id, memory, color }), {
-    onSuccess: () => addItem(id),
-  });
+  const { mutate, isLoading: addingItemToCart } = useMutation(
+    ({ memory, color }) => postMobileToCart({ id, memory, color }),
+    {
+      onSuccess: () => {
+        showToast('Item added to cart', 'success');
+        addItem(id);
+      },
+      onError: () => {
+        showToast('Something went wrong', 'error');
+      },
+    }
+  );
 
   return (
     <div className="mainContainer">
+      <Toast />
       <div>
         <BackArrow goBack={() => navigate(-1)} /> <h1>Mobile Details</h1>
       </div>
-      {isLoading ? <p>Loading...</p> : <MobileCard mobileData={mobileDetail} postMobile={mutate} />}
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <MobileCard mobileData={mobileDetail} postMobile={mutate} addingItemToCart={addingItemToCart} />
+      )}
     </div>
   );
 };

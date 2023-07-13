@@ -20,7 +20,7 @@ export const Header = () => {
       </div>
       <div className="cartContainer">
         <div className="cartNumberItems">{numberOfItems}</div>
-        <img src="./images/cart.svg" alt="cart" height="25px" width="25px" />
+        <img src="./icons/cart.svg" alt="cart" height="25px" width="25px" />
       </div>
     </div>
   );
