@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import React, { useState } from 'react';
 import { DetailCard } from '../DetailCard';
 import { MobileOptions } from '../MobileOptions';
 

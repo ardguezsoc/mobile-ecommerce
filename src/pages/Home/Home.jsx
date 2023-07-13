@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import { useMobileSource } from '../../hooks';
 import { useQuery } from 'react-query';
 import { MobileCardList } from '../../components/MobileCardList/MobileCardList';
