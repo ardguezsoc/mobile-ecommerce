@@ -8,7 +8,7 @@ import filterMobileArray from './utils/filterMobileArray';
 import { Toast, showToast } from '../../components/Toast';
 import { useNavigate } from 'react-router-dom';
 
-import './index.css';
+import './index.scss';
 import { useEffect } from 'react';
 import { Spinner } from '../../components/Spinner';
 

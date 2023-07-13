@@ -1,4 +1,4 @@
 import React from 'react';
-import './index.css';
+import './index.scss';
 
 export const Spinner = () => <div className="spinner"></div>;

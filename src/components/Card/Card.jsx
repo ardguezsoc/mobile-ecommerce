@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './index.scss';
 
 export const Card = ({ mobileItem, navigateTo }) => {
   const { imgUrl, brand, model, price, id } = mobileItem;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { DetailCard } from '../DetailCard';
 import { MobileOptions } from '../MobileOptions';
 import { Spinner } from '../../../../components/Spinner';
-import './index.css';
+import './index.scss';
 
 export const MobileCard = ({ mobileData, postMobile, addingItemToCart }) => {
   const { imgUrl, options } = mobileData;

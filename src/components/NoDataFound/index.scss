@@ -1,11 +1,11 @@
-$color_1: lightslategrey;
+@import '../../../theme.scss';
 
 .noDataFoundContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: $color_1;
+  color: $primary-hover;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 25px;

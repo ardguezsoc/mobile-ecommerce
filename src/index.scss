@@ -1,19 +1,21 @@
+@import '../theme.scss';
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
-  color: black;
-  background-color: white;
+  color: $black;
+  background-color: $white;
   -webkit-text-size-adjust: 100%;
 }
 
 a {
   font-weight: 450;
-  color: #f3a63e;
+  color: $secondary;
   text-decoration: inherit;
   cursor: pointer;
 
   &:hover {
-    color: #f09824;
+    color: $secondary-hover;
   }
 }
 
@@ -48,13 +50,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #4d4d4e;
-  color: #f7f6f9;
+  background-color: $primary;
+  color: $soft-white;
   cursor: pointer;
   transition: 0.5s;
 
   &:hover {
-    background-color: #676767;
+    background-color: $primary-hover;
   }
 
   &:focus,

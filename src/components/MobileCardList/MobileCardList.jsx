@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from '../Card';
 import { NoDataFound } from '../NoDataFound';
-import './index.css';
+import './index.scss';
 
 export const MobileCardList = ({ mobileList, navigateTo }) => {
   return mobileList.length ? (

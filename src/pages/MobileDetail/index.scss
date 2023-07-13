@@ -1,6 +1,4 @@
-$color_1: gray;
-$color_2: black;
-$color_3: #f3a63e;
+@import '../../../theme.scss';
 
 .wrapMobileDetail,
 .deliveryExtranInfo {
@@ -17,33 +15,33 @@ $color_3: #f3a63e;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #f3a63e;
+  background-color: $secondary;
   padding: 10px 15px;
-  color: white;
+  color: $white;
   //make a nice shadow
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   margin-top: 1.5rem;
   button {
-    background-color: white;
-    color: black;
+    background-color: $white;
+    color: $black;
   }
 }
 
 .deliveryExtranInfo {
   div:first-child {
     font-size: 16px;
-    color: $color_2;
+    color: $black;
   }
   margin-top: 2rem;
   font-size: 14px;
-  color: $color_1;
+  color: $primary-hover;
 }
 
 .mobileDetailContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background: white;
+  background: $white;
 }
 .fullGridrow {
   grid-column: span 2;
@@ -55,11 +53,11 @@ $color_3: #f3a63e;
   align-items: center;
   p {
     font-size: 13px;
-    color: $color_1;
+    color: $primary-hover;
   }
   .deliveryCompanyName {
     font-size: 14px;
-    color: $color_3;
+    color: $secondary;
     margin-left: 10px;
   }
 }
@@ -69,13 +67,13 @@ $color_3: #f3a63e;
   flex-direction: row;
 }
 .mobileDetailOldPrice {
-  color: $color_1;
+  color: $primary-hover;
   font-size: 13px;
   text-decoration-line: line-through;
   margin-left: 10px;
 }
 .mobileDetailNewPrice {
   font-size: 25px;
-  color: $color_2;
-  color: $color_3;
+  color: $black;
+  color: $secondary;
 }
