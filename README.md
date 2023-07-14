@@ -25,6 +25,10 @@ To execute this project you will need the .env sent in the email, then:
 - [prettier](https://prettier.io/)🎨: Prettier is an opinionated code formatter used in this case to format the code and no having different styles (executed in pre-commit husky hook 🪝)
 - [husky](https://github.com/typicode/husky)🐶: Hook library to execute different command in pre-push, pre-commit, commit-msg...
 
+## Board 🎫 
+
+[Board](https://github.com/users/ardguezsoc/projects/3) used for this project 
+
 ## Available Scripts 🖥️
 
 In the project directory, you can run:
