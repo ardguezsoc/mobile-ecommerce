@@ -7,6 +7,7 @@ import './index.scss';
 export const MobileCard = ({ mobileData, postMobile, addingItemToCart }) => {
   const { imgUrl, options } = mobileData;
   const optionValues = Object.values(options);
+  const optionLabel = Object.keys(options);
 
   const [memory, setMemory] = useState(options.storages[0].code);
   const [color, setColor] = useState(options.colors[0].code);
@@ -16,7 +17,7 @@ export const MobileCard = ({ mobileData, postMobile, addingItemToCart }) => {
       <img className="sticky" src={imgUrl} alt="mobile-image" />
       <div className="rightMobileDetailContainer">
         <DetailCard mobileData={mobileData} />
-        <MobileOptions options={optionValues} setFunction={[setColor, setMemory]} />
+        <MobileOptions options={optionValues} labels={optionLabel} setFunction={[setColor, setMemory]} />
         <button disabled={addingItemToCart} className="productButton" onClick={() => postMobile({ memory, color })}>
           {addingItemToCart ? <Spinner /> : 'Add to cart'}
         </button>
