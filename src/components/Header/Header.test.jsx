@@ -5,12 +5,16 @@ import { Header } from './Header';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../hooks';
 
-vi.mock('react-router-dom', () => ({
-  useNavigate: vi.fn(),
-}));
-
 vi.mock('../../hooks', () => ({
   useCart: vi.fn(),
+}));
+
+vi.mock('react-router-dom', () => ({
+  useLocation: () => ({
+    pathname: 'localhost:3000/example/path',
+  }),
+  useNavigate: vi.fn(),
+  Link: ({ children }) => <div>{children}</div>,
 }));
 
 describe('Header', () => {
