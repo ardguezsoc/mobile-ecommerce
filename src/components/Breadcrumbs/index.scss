@@ -1,0 +1,25 @@
+@import '../../../theme.scss';
+
+.breadcrumbs {
+  margin: 20px auto;
+  position: absolute;
+  left: 60px;
+  top: 40px;
+  color: $secondary;
+
+  > * {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .crumb {
+    &::after {
+      content: '>';
+      margin-left: 10px;
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
