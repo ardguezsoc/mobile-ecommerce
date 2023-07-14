@@ -20,7 +20,7 @@ To execute this project you will need the .env sent in the email, then:
 
 ### Dev Dependencies
 
-- [commitlint](commitlint helps your team adhere to a commit convention. ) ✔️: commitlint helps your team adhere to a commit convention (executed in commit-msg husky hook 🪝). 
+- [commitlint](https://commitlint.js.org/#/) ✔️: commitlint helps your team adhere to a commit convention (executed in commit-msg husky hook 🪝). 
 - [react-testing-library](https://testing-library.com/docs/react-testing-library/intro/)🐙: The @testing-library family of packages helps you test UI components in a user-centric way (executed in pre-prush husky hook 🪝)
 - vitest 🏗️: package to replace jest when the project is build with vite (executed in pre-prush husky hook 🪝).
 - [prettier](https://prettier.io/)🎨: Prettier is an opinionated code formatter used in this case to format the code and no having different styles (executed in pre-commit husky hook 🪝)
