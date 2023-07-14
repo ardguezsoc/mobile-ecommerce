@@ -1,12 +1,39 @@
 # Getting Started with Vite
 
-This project was bootstrapped with [Vite](https://vitejs.dev/).
+This project was bootstrapped with [Vite](https://vitejs.dev/)
+The package manager used for this project has been [pnpm]('https://pnpm.io/es/') 📦 (recommended to get faste compilation)
 
-## Available Scripts
+## Run project 🎮
+To execute this project you will need the .env sent in the email, then: 
+
+1) npm or pnpm install
+2) npm or pnpm start
+
+## Interesting Libraries Added 📘 
+
+### Dependencies
+- [react-query](https://tanstack.com/query/v4/docs/react/overview) ⤵️ : a data-fetching and state management library for React applications that simplifies fetching, caching, and updating data 
+- [i18N](https://react.i18next.com/):🗺️  is a powerful internationalization framework used to have all the text reusable and located in the same place 📖
+- [react-router](https://reactrouter.com/en/main):🚗 react router provides a declarative way to define the routes in your application, associating each route with a specific component 
+
+
+### Dev Dependencies
+
+- [commitlint](commitlint helps your team adhere to a commit convention. ) ✔️: commitlint helps your team adhere to a commit convention (executed in commit-msg husky hook 🪝). 
+- [react-testing-library](https://testing-library.com/docs/react-testing-library/intro/)🐙: The @testing-library family of packages helps you test UI components in a user-centric way (executed in pre-prush husky hook 🪝)
+- vitest 🏗️: package to replace jest when the project is build with vite (executed in pre-prush husky hook 🪝).
+- [prettier](https://prettier.io/)🎨: Prettier is an opinionated code formatter used in this case to format the code and no having different styles (executed in pre-commit husky hook 🪝)
+- [husky](https://github.com/typicode/husky)🐶: Hook library to execute different command in pre-push, pre-commit, commit-msg...
+
+## Board 🎫 
+
+[Board](https://github.com/users/ardguezsoc/projects/3) used for this project 
+
+## Available Scripts 🖥️
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm  start` or `pnpm  start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,57 +41,26 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### `npm test` or `pnpm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in watchMode = false.\
+See the section about [running tests](https://vitest.dev/api/) for more information.
+
+For testing I have followed a small approach to use: 
+
+- Unit test with [jest](https://jestjs.io/es-ES/)
+- Component test with [react-testing-library](https://testing-library.com/docs/react-testing-library/intro/)
+
+If I had had more time i would have included some kind of e2e test like:
+
+- [Cypress](https://www.cypress.io/) or [Playwright](https://playwright.dev/)
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+simply run the vite build command. By default, it uses <root>/index.html as the build entry point, 
+and produces an application bundle that is suitable to be served over a static hosting service
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+See the section about [build](https://vitejs.dev/guide/build.html) for more information.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
