@@ -19,7 +19,7 @@ describe('Card', () => {
     const brand = screen.getByText('Brand');
     const model = screen.getByText('Model');
     const price = screen.getByText('999$');
-    const viewMoreButton = screen.getByText('View more');
+    const viewMoreButton = screen.getByRole('button');
 
     expect(image).toBeInTheDocument();
     expect(brand).toBeInTheDocument();
@@ -36,7 +36,7 @@ describe('Card', () => {
 
     render(<Card mobileItem={mobileItem} navigateTo={navigateMock} />);
 
-    const viewMoreButton = screen.getByText('View more');
+    const viewMoreButton = screen.getByRole('button');
     fireEvent.click(viewMoreButton);
 
     expect(navigateMock).toHaveBeenCalledWith('/mobile/123');

@@ -19,7 +19,7 @@ export const Header = () => {
         <div className="headerLogo" onClick={() => navigateHome()}>
           <img src="/images/logo.png" alt="logo" />
         </div>
-        <div className="webName" onClick={() => navigateHome()}>
+        <div className="webName" data-testid="eMobile" onClick={() => navigateHome()}>
           <h3>{t('emobile')}</h3>
         </div>
         <div className="cartContainer">

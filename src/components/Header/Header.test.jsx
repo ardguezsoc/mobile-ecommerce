@@ -32,7 +32,7 @@ describe('Header', () => {
 
     const logoImage = screen.getByAltText('logo');
     const cartImage = screen.getByAltText('cart');
-    const webName = screen.getByText('EMobile');
+    const webName = screen.getByTestId('eMobile');
     const cartNumberItems = screen.getByText('5');
 
     expect(logoImage).toBeInTheDocument();
@@ -53,7 +53,7 @@ describe('Header', () => {
   it('calls the navigate function when the web name is clicked', () => {
     render(<Header />);
 
-    const webName = screen.getByText('EMobile');
+    const webName = screen.getByTestId('eMobile');
     fireEvent.click(webName);
 
     expect(navigateMock).toHaveBeenCalledWith('/');
