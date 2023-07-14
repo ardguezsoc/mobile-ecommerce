@@ -25,6 +25,7 @@ To execute this project you will need the .env sent in the email, then:
 - vitest 🏗️: package to replace jest when the project is build with vite (executed in pre-prush husky hook 🪝).
 - [prettier](https://prettier.io/)🎨: Prettier is an opinionated code formatter used in this case to format the code and no having different styles (executed in pre-commit husky hook 🪝)
 - [husky](https://github.com/typicode/husky)🐶: Hook library to execute different command in pre-push, pre-commit, commit-msg...
+- [lint-staged](https://github.com/okonet/lint-staged): package useful to apply lint or prettier rules with hooks (executed in pre-commit husky hook 🪝)
 
 ## Board 🎫
 
@@ -42,7 +43,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test` or `pnpm test`
+### `npm run test` or `pnpm run test`
 
 Launches the test runner in watchMode = false.\
 See the section about [running tests](https://vitest.dev/api/) for more information.
@@ -55,6 +56,10 @@ For testing I have followed a small approach to use:
 If I had had more time i would have included some kind of e2e test like:
 
 - [Cypress](https://www.cypress.io/) or [Playwright](https://playwright.dev/)
+
+### `npm run lint` or `pnpm run lint`
+
+To check the lint in the project
 
 ### `npm run build`
 
