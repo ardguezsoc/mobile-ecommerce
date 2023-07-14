@@ -12,13 +12,13 @@ To execute this project you will need the .env sent in the email, then:
 
 ## Interesting Libraries Added 📘 
 
-### Dependencies
+### Dependencies
 - [react-query](https://tanstack.com/query/v4/docs/react/overview) ⤵️ : a data-fetching and state management library for React applications that simplifies fetching, caching, and updating data 
 - [i18N](https://react.i18next.com/):🗺️  is a powerful internationalization framework used to have all the text reusable and located in the same place 📖
 - [react-router](https://reactrouter.com/en/main):🚗 react router provides a declarative way to define the routes in your application, associating each route with a specific component 
 
 
-### Dev Dependencies
+### Dev Dependencies
 
 - [commitlint](commitlint helps your team adhere to a commit convention. ) ✔️: commitlint helps your team adhere to a commit convention (executed in commit-msg husky hook 🪝). 
 - [react-testing-library](https://testing-library.com/docs/react-testing-library/intro/)🐙: The @testing-library family of packages helps you test UI components in a user-centric way (executed in pre-prush husky hook 🪝)
@@ -26,7 +26,7 @@ To execute this project you will need the .env sent in the email, then:
 - [prettier](https://prettier.io/)🎨: Prettier is an opinionated code formatter used in this case to format the code and no having different styles (executed in pre-commit husky hook 🪝)
 - [husky](https://github.com/typicode/husky)🐶: Hook library to execute different command in pre-push, pre-commit, commit-msg...
 
-## Board 🎫 
+## Board 🎫
 
 [Board](https://github.com/users/ardguezsoc/projects/3) used for this project 
 
