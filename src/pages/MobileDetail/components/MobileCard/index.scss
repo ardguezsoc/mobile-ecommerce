@@ -16,3 +16,12 @@ img.sticky {
   font-size: 14px;
   color: $primary-hover;
 }
+
+@media (max-width: 768px) {
+  img.sticky {
+    position: inherit;
+    width: 200px;
+    margin-top: 74px;
+    align-self: center;
+  }
+}
