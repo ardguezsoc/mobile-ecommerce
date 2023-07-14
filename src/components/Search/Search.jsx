@@ -13,7 +13,7 @@ export const Search = ({ setSearchData }) => {
           placeholder="Search a product..."
           onChange={debounce((e) => setSearchData(e.target.value))}
         />
-        <img src="../icons/search.svg" alt="search-icon" />
+        <img src="/icons/search.svg" alt="search-icon" />
       </div>
     </div>
   );
