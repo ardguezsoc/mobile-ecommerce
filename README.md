@@ -6,8 +6,9 @@ The package manager used for this project has been [pnpm]('https://pnpm.io/es/')
 ## Run project 🎮
 To execute this project you will need the .env sent in the email, then: 
 
-1) npm or pnpm install
-2) npm or pnpm start
+1) nvm use recommended to use the node version defined (optional)
+2) npm or pnpm install
+3) npm or pnpm start
 
 ## Interesting Libraries Added 📘 
 
