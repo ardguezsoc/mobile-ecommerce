@@ -9,12 +9,14 @@ import { BackArrow } from '../../components/BackArrow';
 import { useNavigate } from 'react-router-dom';
 import { Toast, showToast } from '../../components/Toast';
 import { Spinner } from '../../components/Spinner';
+import { useTranslation } from 'react-i18next';
 
 export const MobileDetail = () => {
   const { getMobileDetails, postMobileToCart } = useMobileSource();
   const { addItem } = useCart();
   const { id } = useParams();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const { data: mobileDetail = [], isLoading } = useQuery([`getMobileDetails${id}`], () => getMobileDetails(id));
 
@@ -22,11 +24,11 @@ export const MobileDetail = () => {
     ({ memory, color }) => postMobileToCart({ id, memory, color }),
     {
       onSuccess: () => {
-        showToast('Item added to cart', 'success');
+        showToast(t('toast.success'), 'success');
         addItem(id);
       },
       onError: () => {
-        showToast('Something went wrong', 'error');
+        showToast(t('toast.error'), 'error');
       },
     }
   );

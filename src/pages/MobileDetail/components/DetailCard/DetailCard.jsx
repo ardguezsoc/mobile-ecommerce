@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 export const DetailCard = ({ mobileData }) => {
@@ -7,54 +8,72 @@ export const DetailCard = ({ mobileData }) => {
   const navigate = useNavigate();
 
   const oldPrice = (price) => (parseInt(price) + 100).toString();
+  const { t } = useTranslation();
 
   return (
     <>
       <div className="wrapMobileDetail">
         <h2>{brand}</h2>
         <div className="mobileDetailPriceContainer fullGridrow">
-          <p className="mobileDetailNewPrice">{price}$</p>
-          <p className="mobileDetailOldPrice">{oldPrice(price)}$</p>
+          <p className="mobileDetailNewPrice">
+            {price}
+            {t('currency')}
+          </p>
+          <p className="mobileDetailOldPrice">
+            {oldPrice(price)}
+            {t('currency')}
+          </p>
         </div>
         <div className="fullGridrow deliveryContainer">
-          <p>Sell and sent by</p>
-          <p className="deliveryCompanyName">Emobile</p>
+          <p>{t('sentBy')}</p>
+          <p className="deliveryCompanyName">{t('emobile')}</p>
         </div>
-        <div className="mobileDetailLabel">Model</div>
+        <div className="mobileDetailLabel"> {t('model')}</div>
         <div>{model}</div>
-        <div>Os</div>
+        <div> {t('os')}</div>
         <div>{os}</div>
-        <div>Ram</div>
+        <div>{t('ram')}</div>
         <div>{ram}</div>
-        <div>Camera</div>
+        <div>{t('camera')}</div>
         <div>{camera}</div>
-        <div>Second Camera</div>
+        <div>{t('secondCamera')}</div>
         <div>{secondCamera}</div>
-        <div>Weight</div>
-        <div>{weight}gr</div>
+        <div>{t('weight')}</div>
+        <div>
+          {weight}
+          {t('gr')}
+        </div>
       </div>
       {!moreDetails ? (
-        <a onClick={() => setMoreDetails(true)}>More details</a>
+        <a onClick={() => setMoreDetails(true)}>{t('moreDetails')}</a>
       ) : (
         <div className="wrapMobileDetail">
-          <div className="fullGridrow">CPU: {cpu}</div>
-          <div className="fullGridrow">Screen: {screen}</div>
-          <div className="fullGridrow">Battery: {battery}</div>
-          <div className="fullGridrow">Dimentions: {dimentions}</div>
+          <div className="fullGridrow">
+            {t('cpu')}: {cpu}
+          </div>
+          <div className="fullGridrow">
+            {t('screen')}: {screen}
+          </div>
+          <div className="fullGridrow">
+            {t('battery')}: {battery}
+          </div>
+          <div className="fullGridrow">
+            {t('dimentions')}: {dimentions}
+          </div>
         </div>
       )}
 
       <div className="moreMobileOffers">
-        <p>More offers from Emobile</p>
-        <button onClick={() => navigate('/')}>See offers</button>
+        <p>{t('moreOfferFrom')}</p>
+        <button onClick={() => navigate('/')}>{t('seeOffer')}</button>
       </div>
 
       <div className="deliveryExtranInfo ">
-        <div className="fullGridrow">🚚 Delivery Information</div>
-        <div>Free delivery between today - 20 Dec</div>
-        <div>Urgent Delivery between today - tomorrow</div>
-        <div>24 Months of warranty</div>
-        <div>Delivery with extra protection only 4$</div>
+        <div className="fullGridrow">{t('deliveryInfo')}</div>
+        <div>{t('freeDelivery')}</div>
+        <div>{t('urgentDelivery')}</div>
+        <div>{t('warranty')}</div>
+        <div>{t('deliveryProtection')}</div>
       </div>
     </>
   );

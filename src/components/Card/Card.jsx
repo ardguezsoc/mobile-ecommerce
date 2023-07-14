@@ -1,8 +1,10 @@
 import React from 'react';
 import './index.scss';
+import { useTranslation } from 'react-i18next';
 
 export const Card = ({ mobileItem, navigateTo }) => {
   const { imgUrl, brand, model, price, id } = mobileItem;
+  const { t } = useTranslation();
 
   const handlePrice = (price) => (price ? `${price}$` : 'Free');
 
@@ -19,12 +21,9 @@ export const Card = ({ mobileItem, navigateTo }) => {
             <span>{handlePrice(price)}</span>
           </div>
 
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi quibusdam asperiores porro tempora
-            veritatis cumque.
-          </p>
+          <p>{t('mobileDescription')}</p>
           <button className="productButton" onClick={() => navigateTo(`/mobile/${id}`)}>
-            View more
+            {t('viewMore')}
           </button>
         </div>
       </div>

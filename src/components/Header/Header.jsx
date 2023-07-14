@@ -3,6 +3,7 @@ import './index.scss';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../hooks';
 import { Breadcrumbs } from '../Breadcrumbs';
+import { useTranslation } from 'react-i18next';
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -10,6 +11,7 @@ export const Header = () => {
   const navigateHome = () => navigate('/');
 
   const { numberOfItems } = useCart();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -18,7 +20,7 @@ export const Header = () => {
           <img src="/images/logo.png" alt="logo" />
         </div>
         <div className="webName" onClick={() => navigateHome()}>
-          <h3>EMobile</h3>
+          <h3>{t('emobile')}</h3>
         </div>
         <div className="cartContainer">
           <div className="cartNumberItems">{numberOfItems}</div>

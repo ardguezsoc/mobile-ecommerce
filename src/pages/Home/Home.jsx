@@ -11,18 +11,20 @@ import { useNavigate } from 'react-router-dom';
 import './index.scss';
 import { useEffect } from 'react';
 import { Spinner } from '../../components/Spinner';
+import { useTranslation } from 'react-i18next';
 
 export const Home = () => {
   const { getMobilePage } = useMobileSource();
   const [mobileData, setMobileData] = useState([]);
   const [searchData, setSearchData] = useState();
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const navigateTo = (navigationPath) => navigate(navigationPath);
 
   const { data: mobileListData = [], isLoading } = useQuery(['getMobiles'], () => getMobilePage(), {
     onSuccess: setMobileData,
-    onError: () => showToast('Something went wrong', 'error'),
+    onError: () => showToast(t('toast.error'), 'error'),
   });
 
   useEffect(() => {

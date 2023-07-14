@@ -1,16 +1,19 @@
 import React from 'react';
 import './index.scss';
 import { Toast, showToast } from '../Toast';
+import { useTranslation } from 'react-i18next';
 
 export const NoDataFound = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="noDataFoundContainer">
       <Toast />
       <div className="noDataFoundLeftContainer">
-        <h2>Upss...</h2>
-        <h5>We have looked everywhere but we dont seem to have what you are looking for (Yet!).</h5>
-        <h5>In the meantime, why dont you have a look at some offers?</h5>
-        <button onClick={() => showToast('There is no offers', 'info')}>Lets see some offers</button>
+        <h2>{t('notSearchFound.title')}</h2>
+        <h5>{t('notSearchFound.description1')}</h5>
+        <h5>{t('notSearchFound.description2')}</h5>
+        <button onClick={() => showToast(t('toast.noOffer'), 'info')}>{t('notSearchFound.button')}</button>
       </div>
       <img src="/images/notResults.webp" alt="not-found-results-images" />
     </div>
