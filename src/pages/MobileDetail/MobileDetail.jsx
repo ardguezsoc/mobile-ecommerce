@@ -16,7 +16,7 @@ export const MobileDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const { data: mobileDetail = [], isLoading } = useQuery(['getMobileDetails'], () => getMobileDetails(id));
+  const { data: mobileDetail = [], isLoading } = useQuery([`getMobileDetails${id}`], () => getMobileDetails(id));
 
   const { mutate, isLoading: addingItemToCart } = useMutation(
     ({ memory, color }) => postMobileToCart({ id, memory, color }),

@@ -7,6 +7,8 @@ export const showToast = (message, type) => {
     switch (type) {
       case 'error':
         return toast.error(message);
+      case 'info':
+        return toast.info(message);
       default:
         return toast.success(message);
     }
