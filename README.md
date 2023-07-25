@@ -1,4 +1,4 @@
-# Getting Started with Vite
+# Mobile Ecommerce
 
 This project was bootstrapped with [Vite](https://vitejs.dev/)
 The package manager used for this project has been [pnpm]('https://pnpm.io/es/') 📦 (recommended to get faste compilation)
